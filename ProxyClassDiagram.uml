@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_i9sMIPxfEeatHIZ--LAPOA" name="model">
+  <ownedComment xmi:id="_vO7UQPxfEeatHIZ--LAPOA" annotatedElement="_ktdgoPxfEeatHIZ--LAPOA">
+    <body>Client</body>
+  </ownedComment>
+  <ownedComment xmi:id="_4OU4MPxfEeatHIZ--LAPOA" annotatedElement="_lw2QQPxfEeatHIZ--LAPOA">
+    <body>realSubject->request()</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ktdgoPxfEeatHIZ--LAPOA" name="Subject">
+    <ownedOperation xmi:id="_0CrXIPxfEeatHIZ--LAPOA" name="request"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lw2QQPxfEeatHIZ--LAPOA" name="Proxy">
+    <generalization xmi:id="_Cz3TgPxgEeatHIZ--LAPOA" general="_ktdgoPxfEeatHIZ--LAPOA"/>
+    <ownedAttribute xmi:id="_-lP-APxfEeatHIZ--LAPOA" name="realSubject" type="_lz-cwPxfEeatHIZ--LAPOA" association="_-lP-A_xfEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-lP-AfxfEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-lP-AvxfEeatHIZ--LAPOA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_1XjfYPxfEeatHIZ--LAPOA" name="request"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lz-cwPxfEeatHIZ--LAPOA" name="RealSubject">
+    <generalization xmi:id="_CX_24PxgEeatHIZ--LAPOA" general="_ktdgoPxfEeatHIZ--LAPOA"/>
+    <ownedOperation xmi:id="_2SCKoPxfEeatHIZ--LAPOA" name="request"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-lP-A_xfEeatHIZ--LAPOA" name="realSubject" memberEnd="_-lP-BPxfEeatHIZ--LAPOA _-lP-APxfEeatHIZ--LAPOA">
+    <ownedEnd xmi:id="_-lP-BPxfEeatHIZ--LAPOA" name="proxy" type="_lw2QQPxfEeatHIZ--LAPOA" association="_-lP-A_xfEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-lP-BfxfEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-lP-BvxfEeatHIZ--LAPOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_H98LsPxgEeatHIZ--LAPOA" name="aClient">
+    <ownedAttribute xmi:id="_L2M2sPxgEeatHIZ--LAPOA" name="aProxy" type="_InW8IPxgEeatHIZ--LAPOA" association="_L2M2s_xgEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L2M2sfxgEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L2M2svxgEeatHIZ--LAPOA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_InW8IPxgEeatHIZ--LAPOA" name="aProxy">
+    <ownedAttribute xmi:id="_OMq-0PxgEeatHIZ--LAPOA" name="aRealSubject" type="_JrTscPxgEeatHIZ--LAPOA" association="_OMq-0_xgEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OMq-0fxgEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OMq-0vxgEeatHIZ--LAPOA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JrTscPxgEeatHIZ--LAPOA" name="aRealSubject"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_L2M2s_xgEeatHIZ--LAPOA" name="aClient_aProxy_1" memberEnd="_L2M2tPxgEeatHIZ--LAPOA _L2M2sPxgEeatHIZ--LAPOA">
+    <ownedEnd xmi:id="_L2M2tPxgEeatHIZ--LAPOA" name="aClient" type="_H98LsPxgEeatHIZ--LAPOA" association="_L2M2s_xgEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L2M2tfxgEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L2M2tvxgEeatHIZ--LAPOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OMq-0_xgEeatHIZ--LAPOA" name="aProxy_aRealSubject_1" memberEnd="_OMq-1PxgEeatHIZ--LAPOA _OMq-0PxgEeatHIZ--LAPOA">
+    <ownedEnd xmi:id="_OMq-1PxgEeatHIZ--LAPOA" name="aProxy" type="_InW8IPxgEeatHIZ--LAPOA" association="_OMq-0_xgEeatHIZ--LAPOA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OMq-1fxgEeatHIZ--LAPOA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OMq-1vxgEeatHIZ--LAPOA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
